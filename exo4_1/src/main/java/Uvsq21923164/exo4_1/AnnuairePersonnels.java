@@ -9,10 +9,10 @@ public enum AnnuairePersonnels {
 	
 
 	private PersonnelGroupe init() {
-		PersonnelBuilder pb = new PersonnelBuilder("Jean", "Jacques", "Plombier")
-				.dateNaissance(LocalDate.parse("1970-01-01", DateTimeFormatter.ISO_DATE))
-				.addNumeroTelephone(new NumeroTelephone("Perso", "0666666666"))
-				.addNumeroTelephone(new NumeroTelephone("Fax", "0612345678"));
+		PersonnelBuilder pb = new PersonnelBuilder("youyou", "kebir", "electricien")
+				.dateNaissance(LocalDate.parse("1998-06-01", DateTimeFormatter.ISO_DATE))
+				.addNumeroTelephone(new NumeroTelephone("Perso", "0751393363"))
+				.addNumeroTelephone(new NumeroTelephone("Fax", "0136254845"));
 		Personnel pers1 = pb.build(), pers2 = pb.build();
 		Personnel pers3 = pb.build(), pers4 = pb.build();
 		PersonnelGroupe pg1 = new PersonnelGroupe();
