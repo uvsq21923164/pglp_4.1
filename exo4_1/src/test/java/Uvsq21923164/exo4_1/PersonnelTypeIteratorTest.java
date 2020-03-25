@@ -1,4 +1,4 @@
-package fr.uvsq.pglp.builder.composite.iterator;
+package Uvsq21923164.exo4_1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -6,7 +6,7 @@ import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.uvsq.pglp.builder.composite.iterator.Personnel.PersonnelBuilder;
+import Uvsq21923164.exo4_1.Personnel.PersonnelBuilder;
 
 public class PersonnelTypeIteratorTest {
 	private PersonnelGroupe racine;
@@ -38,7 +38,7 @@ public class PersonnelTypeIteratorTest {
 
 	@Test()
 	public void testPersonnelParGroupe() {
-		Personnel pg = new PersonnelBuilder("Jean", "Jacques", "Plombier").build();
+		Personnel pg = new PersonnelBuilder("youyou", "kebir", "electricien").build();
 		racine.addPersonnel(pg);
 		PersonnelTypeIterator pti = new ParGroupeIterator(racine);
 		assertEquals(pti.next(), pg);
@@ -66,7 +66,7 @@ public class PersonnelTypeIteratorTest {
 	
 	@Test()
 	public void testPersonnelParHierarchie() {
-		Personnel pg = new PersonnelBuilder("Jean", "Jacques", "Plombier").build();
+		Personnel pg = new PersonnelBuilder("youyou", "kebir", "electricien").build();
 		racine.addPersonnel(pg);
 		PersonnelTypeIterator pti = new ParHierarchieIterator(racine);
 		assertEquals(pti.next(), pg);
